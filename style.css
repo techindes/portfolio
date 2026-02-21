@@ -18,15 +18,24 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px 40px;
-  background: rgba(0, 8, 20, 0.6);
+  background: rgba(0, 8, 20, 0.7);
   backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 nav h2 {
   color: #60a5fa;
+  font-size: 20px;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -34,6 +43,12 @@ nav h2 {
   text-decoration: none;
   color: white;
   font-weight: bold;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #60a5fa;
 }
 
 .hero {
@@ -42,22 +57,30 @@ nav h2 {
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 42px;
+  margin-bottom: 10px;
 }
 
 .hero p {
   color: #94a3b8;
+  font-size: 16px;
 }
 
 .buttons a {
   display: inline-block;
-  margin: 15px;
+  margin: 15px 10px;
   padding: 12px 20px;
   background: #60a5fa;
   color: black;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.buttons a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(96,165,250,0.4);
 }
 
 section {
@@ -68,11 +91,12 @@ section {
 
 h2 {
   color: #60a5fa;
+  margin-bottom: 20px;
 }
 
 .card {
-  background: rgba(0, 8, 20, 0.7);
-  padding: 20px;
+  background: rgba(0, 8, 20, 0.75);
+  padding: 22px;
   border-radius: 12px;
   margin-top: 20px;
   backdrop-filter: blur(6px);
@@ -84,7 +108,53 @@ h2 {
   box-shadow: 0 0 20px rgba(96,165,250,0.2);
 }
 
+
 footer {
   text-align: center;
   padding: 40px;
+  margin-top: 40px;
+}
+
+
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    margin: 8px 12px 0 0;
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 80px 20px;
+  }
+
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 60px 18px;
+  }
+
+  .buttons a {
+    margin: 10px 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+  }
 }
