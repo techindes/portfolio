@@ -65,14 +65,20 @@ body {
   bottom: 0;
   width: min(440px, 50%);
   height: 78vh;
-  background: url("quad.jpg") no-repeat bottom right;
-  background-size: contain;
-  filter: grayscale(1) sepia(0.4) contrast(1.05) brightness(1.02);
   opacity: 0.12;
   z-index: -1;
   pointer-events: none;
   -webkit-mask-image: linear-gradient(to top, #000 25%, transparent 92%);
   mask-image: linear-gradient(to top, #000 25%, transparent 92%);
+}
+/* filter lives on ::before so Safari's filter+mask-image bug doesn't fire */
+.quad-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("quad.jpg") no-repeat bottom right;
+  background-size: contain;
+  filter: grayscale(1) sepia(0.4) contrast(1.05) brightness(1.02);
 }
 
 /* ---------- nav ---------- */
@@ -723,11 +729,13 @@ footer .credit a { color: inherit; }
     transform: translateX(50%);
     width: 105%;
     height: 88vh;
-    opacity: 0.2;
-    filter: grayscale(1) sepia(0.35) contrast(1.15) brightness(1);
-    background-position: bottom center;
+    opacity: 0.06;
     -webkit-mask-image: linear-gradient(to top, #000 45%, transparent 96%);
     mask-image: linear-gradient(to top, #000 45%, transparent 96%);
+  }
+  .quad-bg::before {
+    background-position: bottom center;
+    filter: grayscale(1) sepia(0.35) contrast(1.15) brightness(1);
   }
   .hero { padding: 90px 22px 40px; }
   .hero h1 { font-size: clamp(58px, 20vw, 100px); }
