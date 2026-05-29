@@ -729,13 +729,13 @@ footer .credit a { color: inherit; }
     transform: translateX(50%);
     width: 105%;
     height: 88vh;
-    opacity: 0.06;
+    opacity: 0.03;
     -webkit-mask-image: linear-gradient(to top, #000 45%, transparent 96%);
     mask-image: linear-gradient(to top, #000 45%, transparent 96%);
   }
   .quad-bg::before {
     background-position: bottom center;
-    filter: grayscale(1) sepia(0.35) contrast(1.15) brightness(1);
+    filter: grayscale(1) sepia(0.2) contrast(0.9) brightness(1.1);
   }
   .hero { padding: 90px 22px 40px; }
   .hero h1 { font-size: clamp(58px, 20vw, 100px); }
