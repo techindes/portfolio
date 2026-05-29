@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jimit.xyz/sitemap.xml
