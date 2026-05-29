@@ -173,3 +173,46 @@ if (isFinePointer) {
   /* hide the cursor glow on touch */
   if (glow) glow.style.display = "none";
 }
+
+/* ---------- dark mode toggle ---------- */
+const themeToggle = document.getElementById("themeToggle");
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const isDark =
+      document.documentElement.getAttribute("data-theme") === "dark";
+    const next = isDark ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try {
+      localStorage.setItem("theme", next);
+    } catch (e) {}
+  });
+}
+
+/* default follows the system theme; keep following it live until the
+   visitor makes an explicit choice (stored in localStorage) */
+const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+systemTheme.addEventListener("change", (e) => {
+  let stored = null;
+  try {
+    stored = localStorage.getItem("theme");
+  } catch (err) {}
+  if (!stored) {
+    document.documentElement.setAttribute(
+      "data-theme",
+      e.matches ? "dark" : "light"
+    );
+  }
+});
+
+/* ---------- click ripple / splash on blank areas ---------- */
+document.addEventListener("click", (e) => {
+  // ignore clicks on interactive things so it only fires on blank space
+  if (e.target.closest("a, button, input, textarea, label, select, .magnetic"))
+    return;
+  const r = document.createElement("span");
+  r.className = "ripple";
+  r.style.left = e.clientX + "px";
+  r.style.top = e.clientY + "px";
+  document.body.appendChild(r);
+  r.addEventListener("animationend", () => r.remove());
+});
