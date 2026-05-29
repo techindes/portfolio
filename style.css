@@ -717,14 +717,17 @@ footer .credit a { color: inherit; }
 @media (max-width: 640px) {
   nav { padding: 14px 20px; }
   /* let the Quadrangle tower carry the background on phones */
-  #grid { opacity: 0.25; }
+  #grid { opacity: 0.2; }
   .quad-bg {
     right: 50%;
     transform: translateX(50%);
-    width: 92%;
-    height: 80vh;
-    opacity: 0.16;
+    width: 105%;
+    height: 88vh;
+    opacity: 0.2;
+    filter: grayscale(1) sepia(0.35) contrast(1.15) brightness(1);
     background-position: bottom center;
+    -webkit-mask-image: linear-gradient(to top, #000 45%, transparent 96%);
+    mask-image: linear-gradient(to top, #000 45%, transparent 96%);
   }
   .hero { padding: 90px 22px 40px; }
   .hero h1 { font-size: clamp(58px, 20vw, 100px); }
