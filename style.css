@@ -58,6 +58,23 @@ body {
   opacity: 0;
 }
 
+/* USYD Quadrangle clock tower backdrop */
+.quad-bg {
+  position: fixed;
+  right: -20px;
+  bottom: 0;
+  width: min(440px, 50%);
+  height: 78vh;
+  background: url("quad.jpg") no-repeat bottom right;
+  background-size: contain;
+  filter: grayscale(1) sepia(0.4) contrast(1.05) brightness(1.02);
+  opacity: 0.12;
+  z-index: -1;
+  pointer-events: none;
+  -webkit-mask-image: linear-gradient(to top, #000 25%, transparent 92%);
+  mask-image: linear-gradient(to top, #000 25%, transparent 92%);
+}
+
 /* ---------- nav ---------- */
 nav {
   position: sticky;
@@ -499,12 +516,16 @@ footer {
   margin: 0 auto;
   padding: 30px 40px 50px;
   display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
   justify-content: space-between;
   border-top: 1px solid var(--line);
   font-family: var(--mono);
   font-size: 12px;
   color: var(--muted);
 }
+footer .credit { opacity: 0.7; }
+footer .credit a { color: inherit; }
 
 /* ---------- to top ---------- */
 .to-top {
@@ -695,6 +716,16 @@ footer {
 
 @media (max-width: 640px) {
   nav { padding: 14px 20px; }
+  /* let the Quadrangle tower carry the background on phones */
+  #grid { opacity: 0.25; }
+  .quad-bg {
+    right: 50%;
+    transform: translateX(50%);
+    width: 92%;
+    height: 80vh;
+    opacity: 0.16;
+    background-position: bottom center;
+  }
   .hero { padding: 90px 22px 40px; }
   .hero h1 { font-size: clamp(58px, 20vw, 100px); }
   section { padding: 70px 22px; }
