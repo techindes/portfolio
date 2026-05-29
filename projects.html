@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jimit Patel — Projects</title>
+<meta name="description" content="Projects by Jimit Patel — machine learning classifiers, finance tooling and systems programming.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<canvas id="grid" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
+
+<nav>
+  <a href="index.html#top" class="brand">Jimit Patel</a>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html#about"><span>01</span> About</a>
+    <a href="index.html#work"><span>02</span> Work</a>
+    <a href="index.html#skills"><span>03</span> Skills</a>
+    <a href="index.html#beyond"><span>04</span> Beyond</a>
+    <a href="projects.html" class="active"><span>05</span> Projects</a>
+    <a href="index.html#contact"><span>06</span> Contact</a>
+  </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<header class="proj-hero" id="top">
+  <p class="eyeline" data-reveal><span class="dot"></span> Selected work</p>
+  <h1 data-reveal>Things I've<br><span class="accent">built &amp; broken.</span></h1>
+  <p class="lede" data-reveal>
+    A mix of machine-learning classifiers, finance tooling and lower-level systems work.
+    Some are coursework taken further than it needed to go; some are just curiosity that
+    got out of hand.
+  </p>
+</header>
+
+<section class="proj-section">
+  <div class="filter-bar" data-reveal>
+    <button class="filter active" data-filter="all">All</button>
+    <button class="filter" data-filter="ml">Machine Learning</button>
+    <button class="filter" data-filter="finance">Finance</button>
+    <button class="filter" data-filter="systems">Systems</button>
+    <button class="filter" data-filter="tools">Tools</button>
+  </div>
+
+  <div class="proj-grid" id="projGrid">
+
+    <article class="proj-card" data-category="ml finance" data-reveal>
+      <div class="pc-top">
+        <span class="pc-cat">ML · Finance</span>
+        <span class="pc-year">2025</span>
+      </div>
+      <h3>Next-Day Market Movement Classifier</h3>
+      <p>A model that predicts whether a stock closes up or down the next day from technical
+        indicators (moving averages, RSI, volatility). A study in how far simple signals
+        actually get you — and how easy it is to fool yourself.</p>
+      <div class="tags">
+        <span>Python</span><span>scikit-learn</span><span>pandas</span><span>Logistic Regression</span>
+      </div>
+      <div class="pc-links">
+        <a href="#" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </article>
+
+    <article class="proj-card" data-category="ml" data-reveal>
+      <div class="pc-top">
+        <span class="pc-cat">Machine Learning</span>
+        <span class="pc-year">2025</span>
+      </div>
+      <h3>Phishing Email Classifier</h3>
+      <p>An NLP classifier that flags phishing and spam from email text — TF-IDF features into
+        a few different models to compare precision/recall. Grew out of my time with the USYD
+        Cybersecurity Society.</p>
+      <div class="tags">
+        <span>Python</span><span>scikit-learn</span><span>NLTK</span><span>TF-IDF</span>
+      </div>
+      <div class="pc-links">
+        <a href="#" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </article>
+
+    <article class="proj-card" data-category="ml" data-reveal>
+      <div class="pc-top">
+        <span class="pc-cat">Machine Learning</span>
+        <span class="pc-year">2024</span>
+      </div>
+      <h3>Handwritten Digit Recogniser</h3>
+      <p>A convolutional neural network trained on MNIST, with a small web canvas so you can
+        draw a digit and watch it guess in real time. The classic — done properly, end to end.</p>
+      <div class="tags">
+        <span>Python</span><span>PyTorch</span><span>CNN</span><span>NumPy</span>
+      </div>
+      <div class="pc-links">
+        <a href="#" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </article>
+
+    <article class="proj-card" data-category="systems" data-reveal>
+      <div class="pc-top">
+        <span class="pc-cat">Systems</span>
+        <span class="pc-year">2024</span>
+      </div>
+      <h3>Multithreaded Web Server in C</h3>
+      <p>A small HTTP server built from sockets up — thread pool, concurrent connections and
+        careful handling of shared state. Came out of systems programming at USYD and the urge
+        to know what's under the abstraction.</p>
+      <div class="tags">
+        <span>C</span><span>POSIX Threads</span><span>Sockets</span><span>Concurrency</span>
+      </div>
+      <div class="pc-links">
+        <a href="#" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </article>
+
+    <article class="proj-card" data-category="finance tools" data-reveal>
+      <div class="pc-top">
+        <span class="pc-cat">Finance · Tools</span>
+        <span class="pc-year">2025</span>
+      </div>
+      <h3>Portfolio Risk Dashboard</h3>
+      <p>A dashboard that pulls price data and surfaces portfolio risk — volatility, drawdown
+        and a simple valuation view. Where the finance degree and the code finally shake hands.</p>
+      <div class="tags">
+        <span>Python</span><span>pandas</span><span>Plotly</span><span>yfinance</span>
+      </div>
+      <div class="pc-links">
+        <a href="#" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </article>
+
+    <article class="proj-card" data-category="tools" data-reveal>
+      <div class="pc-top">
+        <span class="pc-cat">Tools</span>
+        <span class="pc-year">2025</span>
+      </div>
+      <h3>pytest Helper Toolkit</h3>
+      <p>A small set of reusable pytest fixtures and helpers that cut the boilerplate out of
+        writing tests — inspired by the kind of utilities I build day-to-day at Bayer.</p>
+      <div class="tags">
+        <span>Python</span><span>pytest</span><span>CI/CD</span>
+      </div>
+      <div class="pc-links">
+        <a href="#" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </article>
+
+  </div>
+
+  <p class="proj-note" data-reveal>More on the way — I'll keep this updated as I ship things.</p>
+</section>
+
+<section id="contact">
+  <p class="section-tag" data-reveal>Get in touch</p>
+  <h2 class="contact-head" data-reveal>Want to see more?</h2>
+  <p class="contact-sub" data-reveal>Happy to walk through any of these — code, trade-offs and what I'd do differently.</p>
+  <a class="mail-link magnetic" href="mailto:pjimit716@gmail.com" data-reveal>pjimit716@gmail.com</a>
+  <div class="contact-links" data-reveal>
+    <a href="https://www.linkedin.com/in/-jimit-patel" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a href="https://github.com/Jimit-Bayer" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Jimit Patel</span>
+  <span>Sydney, Australia</span>
+  <span><a href="index.html#top" style="color:inherit;text-decoration:none;">← Back home</a></span>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+<script>
+/* ---------- project filtering ---------- */
+const filters = document.querySelectorAll(".filter");
+const cards = document.querySelectorAll(".proj-card");
+filters.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    filters.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    const f = btn.dataset.filter;
+    cards.forEach((card) => {
+      const show = f === "all" || card.dataset.category.includes(f);
+      card.classList.toggle("hide", !show);
+    });
+  });
+});
+</script>
+</body>
+</html>

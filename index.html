@@ -3,156 +3,251 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jimit Patel</title>
+<title>Jimit Patel — Engineering × Commerce</title>
+<meta name="description" content="Jimit Patel — Software Engineering Intern at Bayer. Advanced Computing & Commerce at the University of Sydney. Computer Science × Finance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<canvas id="stars"></canvas>
+<canvas id="grid" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-glow" aria-hidden="true"></div>
 
 <nav>
-  <h2>Jimit Patel</h2>
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
-    <a href="#finance">Finance</a>
-    <a href="#leadership">Leadership</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
+  <a href="#top" class="brand">Jimit Patel</a>
+  <div class="nav-links" id="navLinks">
+    <a href="#about"><span>01</span> About</a>
+    <a href="#work"><span>02</span> Work</a>
+    <a href="#skills"><span>03</span> Skills</a>
+    <a href="#beyond"><span>04</span> Beyond</a>
+    <a href="#contact"><span>05</span> Contact</a>
   </div>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
-<header class="hero">
-  <h1>Bachelor of Advanced Computing &<br>Bachelor of Commerce</h1>
-  <p>Computer Science & Finance • Software Engineering Intern • University of Sydney</p>
+<header class="hero" id="top">
+  <p class="eyeline" data-reveal><span class="dot"></span> Currently — Software Engineering Intern @ Bayer</p>
 
-<div class="buttons">
-  <a href="https://www.linkedin.com/in/-jimit-patel" target="_blank">LinkedIn</a>
-  <a href="https://github.com/Jimit-Bayer" target="_blank">GitHub</a>
-  <a href="mailto:jimit.codes@gmail.com">Contact</a>
-</div>
+  <h1 data-reveal>
+    <span class="line">Jimit</span>
+    <span class="line accent">Patel</span>
+  </h1>
+
+  <p class="role" data-reveal>
+    <span class="role-static">I build </span><span class="role-rotate" id="rotator">reliable systems</span>
+  </p>
+
+  <p class="lede" data-reveal>
+    I'm studying Advanced Computing and Commerce at the University of Sydney — computer
+    science and finance, side by side. I enjoy writing software that genuinely works, and
+    I care just as much about why a thing is worth building in the first place.
+  </p>
+
+  <div class="buttons" data-reveal>
+    <a class="btn primary magnetic" href="#contact">Get in touch <span aria-hidden="true">→</span></a>
+    <a class="btn ghost magnetic" href="https://www.linkedin.com/in/-jimit-patel" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn ghost magnetic" href="https://github.com/Jimit-Bayer" target="_blank" rel="noopener">GitHub</a>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Python</span><span>•</span><span>Test Automation</span><span>•</span><span>Finance</span><span>•</span><span>Git</span><span>•</span><span>CI/CD</span><span>•</span><span>SQL</span><span>•</span><span>Agile</span><span>•</span><span>Java</span><span>•</span>
+      <span>Python</span><span>•</span><span>Test Automation</span><span>•</span><span>Finance</span><span>•</span><span>Git</span><span>•</span><span>CI/CD</span><span>•</span><span>SQL</span><span>•</span><span>Agile</span><span>•</span><span>Java</span><span>•</span>
+    </div>
+  </div>
 </header>
 
+<section class="stats" id="stats">
+  <div class="stat" data-reveal>
+    <span class="num" data-count="99.95" data-decimals="2">0</span>
+    <span class="label">ATAR — Chancellor's Award</span>
+  </div>
+  <div class="stat" data-reveal>
+    <span class="num" data-count="2">0</span>
+    <span class="label">Degrees, one mind</span>
+  </div>
+  <div class="stat" data-reveal>
+    <span class="num"><span data-count="500">0</span></span>
+    <span class="label">Fortune 500 — interning at Bayer</span>
+  </div>
+  <div class="stat" data-reveal>
+    <span class="num">∞</span>
+    <span class="label">Things left to build</span>
+  </div>
+</section>
+
 <section id="about">
-  <h2>About Me</h2>
-
-  <p>
-    I am a Software Engineering Intern at Bayer and a third-year student at the University 
-    of Sydney pursuing a Bachelor of Advanced Computing and Bachelor of Commerce, majoring 
-    in Computer Science and Finance.
-  </p>
-
-  <p>
-    My experience spans software engineering, automation, networking and embedded systems. 
-    I enjoy building reliable and scalable systems, particularly in environments where 
-    software must be robust, maintainable and aligned with real-world business and 
-    operational requirements.
-  </p>
-
-  <p>
-    Through my combined background in computing and finance, I approach technical problems 
-    with both engineering rigour and commercial awareness, and I am particularly interested 
-    in fintech, trading systems and high-performance engineering.
-  </p>
-</section>
-
-<section id="education">
-  <h2>Education & Awards</h2>
-
-  <div class="card">
-    <h3>University of Sydney</h3>
-    <p>Bachelor of Advanced Computing & Bachelor of Commerce</p>
-    <p>Majors: Computer Science & Finance</p>
-    <p>2023 – Present</p>
-
-    <ul>
-      <li>Chancellor’s Award for Academic Excellence</li>
-      <li>Dalyell Scholars Program</li>
-      <li>Beta Gamma Sigma Honour Society</li>
-      <li>Distinction WAM</li>
-    </ul>
+  <p class="section-tag" data-reveal>01 — About</p>
+  <div class="about-grid">
+    <h2 data-reveal>Two degrees, <em>one</em> way of thinking.</h2>
+    <div class="about-body">
+      <p data-reveal>
+        I'm a software engineering intern at Bayer and a student at the University of Sydney,
+        where I'm doing a double degree in Advanced Computing and Commerce — Computer Science
+        and Finance. They're two fairly different worlds, but I've found they make more sense
+        together than most people expect.
+      </p>
+      <p data-reveal>
+        At Bayer I write Python software and internal tooling for the MEDRAD® CT injection
+        systems — medical devices used in hospitals, so the standard for "it works" is genuinely
+        high. It's taught me a lot about writing clean code that other engineers can trust and build on.
+      </p>
+      <p data-reveal>
+        I also enjoy the lower-level side of computing. Through systems programming at USYD I've
+        spent time learning how software really behaves underneath the abstractions — memory,
+        processes and the details that usually stay hidden. The finance side keeps me focused on
+        a different question: not just whether we <em>can</em> build something, but whether it's
+        worth building. That combination is what draws me to fintech and quantitative tooling.
+      </p>
+    </div>
   </div>
 </section>
 
-<section id="experience">
-  <h2>Professional Experience</h2>
+<section id="work">
+  <p class="section-tag" data-reveal>02 — Work &amp; Education</p>
+  <h2 class="section-head" data-reveal>The path so far</h2>
 
-  <div class="card">
-    <h3>Software Engineering Intern — Bayer</h3>
-    <p>Sydney • Dec 2025 – Present</p>
+  <ol class="timeline">
+    <li class="tl-item" data-reveal>
+      <div class="tl-time">Dec 2025 — Present</div>
+      <div class="tl-card">
+        <h3>Software Engineering Intern <span class="org">Bayer</span></h3>
+        <p class="place">Radiology Division · Sydney, Australia</p>
+        <ul>
+          <li>Building Python software and internal tooling for the MEDRAD® Actargo &amp; Centargo CT injection systems, working alongside senior engineers.</li>
+          <li>Review pull requests and give feedback to help keep the codebase consistent and easy to work in.</li>
+          <li>Wrote reusable helper utilities and components that the wider team now uses day-to-day.</li>
+          <li>Working in a full Agile environment — daily stand-ups, sprint planning and retrospectives across Scrum and Kanban.</li>
+        </ul>
+      </div>
+    </li>
 
-    <ul>
-      <li>Design and develop scalable automation frameworks for medical device software</li>
-      <li>Build GUI and system-level automated tests using Python and Squish</li>
-      <li>Develop reusable test abstractions for Qt/QML applications</li>
-      <li>Integrate automated testing into CI/CD and regression pipelines</li>
-      <li>Maintain requirement-to-test traceability using IBM DOORS and RQM</li>
-      <li>Debug complex automation and system issues through logs and object inspection</li>
-      <li>Collaborate with engineers in Agile development environments</li>
-      <li>Manage version control and collaboration using GitHub</li>
-    </ul>
-  </div>
+    <li class="tl-item" data-reveal>
+      <div class="tl-time">2023 — Present</div>
+      <div class="tl-card edu">
+        <h3>BAdvComputing &amp; BCommerce <span class="org">University of Sydney</span></h3>
+        <p class="place">Majors: Computer Science &amp; Finance</p>
+        <ul>
+          <li>Dalyell Scholar — recognised for academic excellence and leadership potential.</li>
+          <li>Chancellor's Award Recipient — awarded for an ATAR of 99.95+.</li>
+          <li>Studied systems programming, building lower-level software in C and learning how programs behave close to the machine.</li>
+          <li>WAM in the Distinction – High Distinction range across core programming and finance units.</li>
+        </ul>
+      </div>
+    </li>
 
-  <div class="card">
-    <h3>IT Engineer — RhinoCo Technology</h3>
-    <p>Sydney • Jan 2024 – Nov 2025</p>
-
-    <ul>
-      <li>Configured wireless bridges and IPv4 networking systems</li>
-      <li>Diagnosed and resolved customer technical issues</li>
-      <li>Reduced system downtime and improved reliability</li>
-      <li>Worked on embedded systems and hardware validation</li>
-      <li>Configured RTSP streaming, SSH and network infrastructure</li>
-    </ul>
-  </div>
-</section>
-
-<section id="finance">
-  <h2>Finance & Technical Interests</h2>
-  <div class="card">
-    <ul>
-      <li>Major in Finance alongside Computer Science</li>
-      <li>Strong interest in financial markets and technology</li>
-      <li>Excel modelling and analytical problem solving</li>
-      <li>Understanding of corporate finance and valuation</li>
-      <li>Interested in fintech, trading systems and quantitative technology</li>
-    </ul>
-  </div>
-</section>
-
-<section id="leadership">
-  <h2>Leadership & Activities</h2>
-  <div class="card">
-    <ul>
-      <li>Business School Peer Mentor — University of Sydney</li>
-      <li>Cybersecurity Society Subcommittee Member</li>
-      <li>Humanitarian Innovation Hackathon Participant</li>
-      <li>Badminton and Raspberry Pi projects</li>
-    </ul>
-  </div>
+    <li class="tl-item" data-reveal>
+      <div class="tl-time">Jan 2024 — Dec 2025</div>
+      <div class="tl-card">
+        <h3>IT Service Officer <span class="org">Rhinoco Technology</span></h3>
+        <p class="place">McGrath's Hill, NSW</p>
+        <ul>
+          <li>Resolved hardware, software and networking issues for B2B and B2C customers, consistently delivering first-call resolutions.</li>
+          <li>Diagnosed complex problems through structured troubleshooting, escalating only when necessary.</li>
+          <li>Worked with the support team to streamline internal processes and raise service standards.</li>
+        </ul>
+      </div>
+    </li>
+  </ol>
 </section>
 
 <section id="skills">
-  <h2>Technical Skills</h2>
-  <div class="card">
-    <p><strong>Languages:</strong> Python, C, Java</p>
-    <p><strong>Tools:</strong> Git, Linux, Squish, Qt/QML, CI/CD</p>
-    <p><strong>Concepts:</strong> Data Structures, Algorithms, Networking, Multithreading</p>
-    <p><strong>Other:</strong> Embedded Systems, RTSP Streaming, Excel & Financial Analysis</p>
+  <p class="section-tag" data-reveal>03 — Skills</p>
+  <h2 class="section-head" data-reveal>The toolkit</h2>
+
+  <div class="skill-grid">
+    <div class="skill-card" data-reveal>
+      <h3>Languages</h3>
+      <div class="tags">
+        <span>Python</span><span>Java</span><span>C</span><span>SQL</span><span>HTML / CSS</span>
+      </div>
+    </div>
+    <div class="skill-card" data-reveal>
+      <h3>CS Foundations</h3>
+      <div class="tags">
+        <span>Systems Programming</span><span>Data Structures &amp; Algorithms</span><span>OOP</span><span>Concurrency</span><span>Networking</span>
+      </div>
+    </div>
+    <div class="skill-card" data-reveal>
+      <h3>Software Engineering</h3>
+      <div class="tags">
+        <span>Git &amp; GitHub</span><span>Code Review</span><span>CI/CD</span><span>Debugging</span><span>Automated Testing</span>
+      </div>
+    </div>
+    <div class="skill-card" data-reveal>
+      <h3>AI-Augmented Workflow</h3>
+      <div class="tags">
+        <span>Cursor</span><span>GitHub Copilot</span><span>Critical review of AI output</span>
+      </div>
+    </div>
+    <div class="skill-card" data-reveal>
+      <h3>Regulated SDLC</h3>
+      <div class="tags">
+        <span>IBM DOORS Next</span><span>IBM RQM</span><span>PTC Windchill</span><span>Traceability</span>
+      </div>
+    </div>
+    <div class="skill-card" data-reveal>
+      <h3>Finance &amp; Analytics</h3>
+      <div class="tags">
+        <span>Corporate Valuation</span><span>Capital Structure</span><span>Quant Modelling</span><span>Excel</span>
+      </div>
+    </div>
+    <div class="skill-card" data-reveal>
+      <h3>Ways of Working</h3>
+      <div class="tags">
+        <span>Scrum</span><span>Kanban</span><span>Sprint Planning</span><span>Cross-Time-Zone Collab</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="beyond">
+  <p class="section-tag" data-reveal>04 — Beyond the code</p>
+  <h2 class="section-head" data-reveal>Leadership &amp; the rest of me</h2>
+
+  <div class="beyond-grid">
+    <div class="beyond-card" data-reveal>
+      <span class="bk-no">01</span>
+      <h3>Peer Mentor</h3>
+      <p>USYD Business School — guiding first-year Commerce students through the transition with sessions on planning, networking and study strategy.</p>
+    </div>
+    <div class="beyond-card" data-reveal>
+      <span class="bk-no">02</span>
+      <h3>Cybersecurity Society</h3>
+      <p>Subcommittee member — co-organising industry networking events and technical workshops, from speaker outreach to event logistics.</p>
+    </div>
+    <div class="beyond-card" data-reveal>
+      <span class="bk-no">03</span>
+      <h3>Builder by default</h3>
+      <p>Hackathons, Raspberry Pi tinkering and the occasional badminton match — I like making things and the people I make them with.</p>
+    </div>
   </div>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-  <p>Email: jimit.codes@gmail.com</p>
-  <p>LinkedIn: www.linkedin.com/in/-jimit-patel</p>
+  <p class="section-tag" data-reveal>05 — Contact</p>
+  <h2 class="contact-head" data-reveal>Let's build something<br><em>worth building.</em></h2>
+  <p class="contact-sub" data-reveal>Open to internships and graduate roles in software engineering, business analytics and technology consulting.</p>
+  <a class="mail-link magnetic" href="mailto:pjimit716@gmail.com" data-reveal>pjimit716@gmail.com</a>
+  <div class="contact-links" data-reveal>
+    <a href="https://www.linkedin.com/in/-jimit-patel" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a href="https://github.com/Jimit-Bayer" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
 </section>
 
 <footer>
-  © 2026 Jimit Patel
+  <span>© 2026 Jimit Patel</span>
+  <span>Sydney, Australia</span>
+  <span>Built from scratch</span>
 </footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
 
 <script src="script.js"></script>
 </body>
